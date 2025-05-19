@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "549b89f0-1736-4adb-a4c9-8a706d652bf4",
+		"name": "event",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44952200",
+		"_collection_link": "https://hansolshin-6227008.postman.co/workspace/hansol-Shin's-Workspace~99f632e0-bd3b-4eea-8f4a-9f6287c9cb9b/collection/44952200-549b89f0-1736-4adb-a4c9-8a706d652bf4?action=share&source=collection_link&creator=44952200"
+	},
+	"item": [
+		{
+			"name": "update event",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODJiMTJjYjU3MzdkNmVjZmRhY2U4N2EiLCJlbWFpbCI6ImFkbWluIiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzQ3NjUzMzM1LCJleHAiOjE3NDc2NTY5MzV9.scM1dRJUxC90McJwxvcfr8fJ9z4xz3Vli2t4onoc8XA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventId\": 3,\r\n    \"state\": \"ACTIVE\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/event/state",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"event",
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODJiMTJjYjU3MzdkNmVjZmRhY2U4N2EiLCJlbWFpbCI6ImFkbWluIiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzQ3NjUzMzM1LCJleHAiOjE3NDc2NTY5MzV9.scM1dRJUxC90McJwxvcfr8fJ9z4xz3Vli2t4onoc8XA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/event/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"event",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "condition",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userEmail\":\"admin\", \"conditionId\":1, \"conditionStatus\":true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/condition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"condition"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create event",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODJiMTJjYjU3MzdkNmVjZmRhY2U4N2EiLCJlbWFpbCI6ImFkbWluIiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzQ3NjUzMzM1LCJleHAiOjE3NDc2NTY5MzV9.scM1dRJUxC90McJwxvcfr8fJ9z4xz3Vli2t4onoc8XA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventId\": 3,\r\n    \"title\": \"솔에르다 뿌리기\",\r\n    \"description\": \"솔에르다 뿌리기\",\r\n    \"startDate\": \"2025-06-01T00:00:00Z\",\r\n    \"endDate\": \"2025-06-30T23:59:59Z\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/event",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"event"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

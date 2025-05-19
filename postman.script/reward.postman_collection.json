@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "0e93104f-fe93-40b1-9515-fcdf647c6f68",
+		"name": "reward",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44952200",
+		"_collection_link": "https://hansolshin-6227008.postman.co/workspace/hansol-Shin's-Workspace~99f632e0-bd3b-4eea-8f4a-9f6287c9cb9b/collection/44952200-0e93104f-fe93-40b1-9515-fcdf647c6f68?action=share&source=collection_link&creator=44952200"
+	},
+	"item": [
+		{
+			"name": "reward",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODJiMTJjYjU3MzdkNmVjZmRhY2U4N2EiLCJlbWFpbCI6ImFkbWluIiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzQ3NjUzMzM1LCJleHAiOjE3NDc2NTY5MzV9.scM1dRJUxC90McJwxvcfr8fJ9z4xz3Vli2t4onoc8XA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rewardId\": 1,\r\n    \"eventId\": 3,\r\n    \"conditionIds\": [1],\r\n    \"type\": \"ITEM\",\r\n    \"name\": \"솔에르다\",\r\n    \"value\": 500,\r\n    \"quantity\": 100\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reward/detail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reward",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reward request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODJiMTJjYjU3MzdkNmVjZmRhY2U4N2EiLCJlbWFpbCI6ImFkbWluIiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzQ3NjUzMzM1LCJleHAiOjE3NDc2NTY5MzV9.scM1dRJUxC90McJwxvcfr8fJ9z4xz3Vli2t4onoc8XA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rewardRequest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rewardRequest",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reward request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODJiMTJjYjU3MzdkNmVjZmRhY2U4N2EiLCJlbWFpbCI6ImFkbWluIiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzQ3NjUzMzM1LCJleHAiOjE3NDc2NTY5MzV9.scM1dRJUxC90McJwxvcfr8fJ9z4xz3Vli2t4onoc8XA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rewardRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rewardRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reward request monitoring",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODJiMTJjYjU3MzdkNmVjZmRhY2U4N2EiLCJlbWFpbCI6ImFkbWluIiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzQ3NjUzMzM1LCJleHAiOjE3NDc2NTY5MzV9.scM1dRJUxC90McJwxvcfr8fJ9z4xz3Vli2t4onoc8XA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rewardRequest/monitoring?requestStatus=SUCCESS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rewardRequest",
+						"monitoring"
+					],
+					"query": [
+						{
+							"key": "requestStatus",
+							"value": "SUCCESS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reward",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODJiMTJjYjU3MzdkNmVjZmRhY2U4N2EiLCJlbWFpbCI6ImFkbWluIiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzQ3NjUzMzM1LCJleHAiOjE3NDc2NTY5MzV9.scM1dRJUxC90McJwxvcfr8fJ9z4xz3Vli2t4onoc8XA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/reward/detail?eventId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reward",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "eventId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
