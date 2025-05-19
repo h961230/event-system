@@ -1,4 +1,5 @@
-version: '3.8'
+version: "3.8"
+
 services:
   mongo:
     image: mongo:6
@@ -8,6 +9,7 @@ services:
       - "27017:27017"
     volumes:
       - mongo-data:/data/db
+
   auth-service:
     build: ./auth
     container_name: auth-service
@@ -21,19 +23,6 @@ services:
       - JWT_SECRET=testetestestsetsetsetsetestse
       - JWT_EXPIRE=3600s
 
-  gateway-service:
-    build: ./gateway
-    container_name: gateway-service
-    restart: always
-    ports:
-      - "3000:3000"
-    depends_on:
-      - auth-service
-    environment:
-      - AUTH_SERVICE_URL=http://auth-service:3000
-      - EVENT_SERVICE_URL=http://event-service:3000
-      - JWT_SECRET=testetestestsetsetsetsetestse
-
   event-service:
     build: ./event
     container_name: event-service
@@ -44,6 +33,20 @@ services:
       - mongo
     environment:
       - MONGO_URI=mongodb://mongo:27017/event-db
+
+  gateway-service:
+    build: ./gateway
+    container_name: gateway-service
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - auth-service
+      - event-service
+    environment:
+      - AUTH_SERVICE_URL=http://auth-service:3000
+      - EVENT_SERVICE_URL=http://event-service:3000
+      - JWT_SECRET=testetestestsetsetsetsetestse
 
 volumes:
   mongo-data:

@@ -63,6 +63,8 @@ export class RewardRequestService {
       rewardId,
     });
 
+    this.logger.log({ rewardRequestHist: rewardRequestHist });
+
     const updateData = {
       eventId: reward.eventId,
       requestStatus: success ? 'SUCCESS' : 'FAILURE',
@@ -74,9 +76,11 @@ export class RewardRequestService {
 
     if (rewardRequestHist) {
       return this.rewardRequestModel.findByIdAndUpdate(
-        rewardRequestHist.id,
+        rewardRequestHist._id,
         updateData,
-        { new: true },
+        {
+          new: true,
+        },
       );
     }
 

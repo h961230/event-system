@@ -19,3 +19,4 @@ export class UserCondition {
 }
 
 export const UserConditionSchema = SchemaFactory.createForClass(UserCondition);
+UserConditionSchema.index({ userEmail: 1, conditionId: 1 }, { unique: true });
