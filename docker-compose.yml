@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+  auth-service:
+    build: ./auth
+    container_name: auth-service
+    restart: always
+    ports:
+      - "3001:3000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/auth-db
+      - JWT_SECRET=testetestestsetsetsetsetestse
+      - JWT_EXPIRE=3600s
+
+  gateway-service:
+    build: ./gateway
+    container_name: gateway-service
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - auth-service
+    environment:
+      - AUTH_SERVICE_URL=http://auth-service:3000
+      - EVENT_SERVICE_URL=http://event-service:3000
+      - JWT_SECRET=testetestestsetsetsetsetestse
+
+  event-service:
+    build: ./event
+    container_name: event-service
+    restart: always
+    ports:
+      - "3002:3000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/event-db
+
+volumes:
+  mongo-data:
