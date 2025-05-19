@@ -1,3 +1,8 @@
+# 실행 방법
+
+- EVENT-SYSTEM 하위에서 `docker-compose up --build` 명령어 입력
+- 내 실행 환경 Docker version: 28.0.4
+
 # 연동 규격서
 
 ## 공통 사항
