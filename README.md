@@ -13,6 +13,13 @@
 
 - 프로젝트 내부 postman.script 폴더를 참조하여 api를 테스트하시기 바랍니다.
 
+## Condition API
+
+- http://localhost:3002/condition API의 경우 본 프로젝트의 테스트를 위한 api
+- gateway로 라우팅 처리를 하지 않았습니다.
+- user의 특정 보상을 얻기위한 조건의 충족 여부를 수정하기 위한 api
+- postman.script 하위 event.postman_collection.json 내부 condition request를 참조하시기 바랍니다.
+
 ---
 
 ## Auth API
