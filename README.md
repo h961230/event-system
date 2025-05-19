@@ -323,7 +323,7 @@
 | eventId       | number | 이벤트 ID (선택)            |
 | requestStatus | string | 'SUCCESS', 'FAILURE' (선택) |
 | page          | number | 페이지 번호 (기본 1)        |
-| limit         | number | 페이지 크기 (기본 10)       |
+| limit         | number | 페이지 크기 (기본 20)       |
 
 - **Response**: 필터링된 요청 이력 목록
 
