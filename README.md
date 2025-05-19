@@ -9,6 +9,10 @@
 - 응답 형식: JSON (UTF-8)
 - 요청 형식: 'Content-Type: application/json'
 
+## Test
+
+- 프로젝트 내부 postman.script 폴더를 참조하여 api를 테스트하시기 바랍니다.
+
 ---
 
 ## Auth API
@@ -27,13 +31,13 @@
 
 - **Response**:
 
-'''json
+```json
 {
-"message": "success sign up",
-"email": "user@example.com",
-"roles": ["USER"]
+  "message": "success sign up",
+  "email": "user@example.com",
+  "roles": ["USER"]
 }
-'''
+```
 
 ---
 
@@ -50,11 +54,11 @@
 
 - **Response**:
 
-'''json
+```json
 {
-"accessToken": "<JWT_TOKEN>"
+  "accessToken": "<JWT_TOKEN>"
 }
-'''
+```
 
 ---
 
@@ -72,20 +76,18 @@
 
 - **Response**:
 
-'''json
+```json
 {
-"message": "Roles updated",
-"updated": {
-"\_id": "6829d78b0c080384c3a4f337",
-"email": "test",
-"password": "$2b$10$OO6YuYoyW9R1NtD6GHxAuuzuP30i1S8AOdv08IBgJlxTWYYNgdy6i",
-"roles": [
-"USER"
-],
-"\_\_v": 0
+  "message": "Roles updated",
+  "updated": {
+    "_id": "6829d78b0c080384c3a4f337",
+    "email": "test",
+    "password": "$2b$10$OO6YuYoyW9R1NtD6GHxAuuzuP30i1S8AOdv08IBgJlxTWYYNgdy6i",
+    "roles": ["USER"],
+    "__v": 0
+  }
 }
-}
-'''
+```
 
 ---
 
@@ -107,15 +109,15 @@
 
 - **Response**:
 
-'''json
+```json
 {
-"eventId": 3,
-"title": "솔에르다 뿌리기",
-"description": "솔에르다 뿌리기",
-"startDate": "2025-06-01T00:00:00Z",
-"endDate": "2025-06-30T23:59:59Z"
+  "eventId": 3,
+  "title": "솔에르다 뿌리기",
+  "description": "솔에르다 뿌리기",
+  "startDate": "2025-06-01T00:00:00Z",
+  "endDate": "2025-06-30T23:59:59Z"
 }
-'''
+```
 
 ---
 
@@ -125,22 +127,22 @@
 - **권한**:
 - **Response**: 이벤트 목록 배열
 
-'''json
+```json
 [
-{
-"_id": "682ad7531df7c77203b757af",
-"eventId": 3,
-"title": "솔에르다 뿌리기",
-"description": "솔에르다 뿌리기",
-"state": "ACTIVE",
-"startDate": "2025-06-01T00:00:00.000Z",
-"endDate": "2025-06-30T23:59:59.000Z",
-"createdBy": "admin",
-"createdAt": "2025-05-19T07:01:39.983Z",
-"__v": 0
-}
+  {
+    "_id": "682ad7531df7c77203b757af",
+    "eventId": 3,
+    "title": "솔에르다 뿌리기",
+    "description": "솔에르다 뿌리기",
+    "state": "ACTIVE",
+    "startDate": "2025-06-01T00:00:00.000Z",
+    "endDate": "2025-06-30T23:59:59.000Z",
+    "createdBy": "admin",
+    "createdAt": "2025-05-19T07:01:39.983Z",
+    "__v": 0
+  }
 ]
-'''
+```
 
 ---
 
@@ -152,20 +154,20 @@
   - 'eventId': 조회할 이벤트 ID (number)
 - **Response**: 이벤트 목록
 
-'''json
+```json
 {
-"\_id": "682ad7531df7c77203b757af",
-"eventId": 3,
-"title": "솔에르다 뿌리기",
-"description": "솔에르다 뿌리기",
-"state": "ACTIVE",
-"startDate": "2025-06-01T00:00:00.000Z",
-"endDate": "2025-06-30T23:59:59.000Z",
-"createdBy": "admin",
-"createdAt": "2025-05-19T07:01:39.983Z",
-"\_\_v": 0
+  "_id": "682ad7531df7c77203b757af",
+  "eventId": 3,
+  "title": "솔에르다 뿌리기",
+  "description": "솔에르다 뿌리기",
+  "state": "ACTIVE",
+  "startDate": "2025-06-01T00:00:00.000Z",
+  "endDate": "2025-06-30T23:59:59.000Z",
+  "createdBy": "admin",
+  "createdAt": "2025-05-19T07:01:39.983Z",
+  "__v": 0
 }
-'''
+```
 
 ---
 
@@ -182,20 +184,20 @@
 
 - **Response**: 변경된 상태 정보 또는 처리 결과 메시지
 
-'''json
+```json
 {
-"\_id": "682ad7531df7c77203b757af",
-"eventId": 3,
-"title": "솔에르다 뿌리기",
-"description": "솔에르다 뿌리기",
-"state": "ACTIVE",
-"startDate": "2025-06-01T00:00:00.000Z",
-"endDate": "2025-06-30T23:59:59.000Z",
-"createdBy": "admin",
-"createdAt": "2025-05-19T07:01:39.983Z",
-"\_\_v": 0
+  "_id": "682ad7531df7c77203b757af",
+  "eventId": 3,
+  "title": "솔에르다 뿌리기",
+  "description": "솔에르다 뿌리기",
+  "state": "ACTIVE",
+  "startDate": "2025-06-01T00:00:00.000Z",
+  "endDate": "2025-06-30T23:59:59.000Z",
+  "createdBy": "admin",
+  "createdAt": "2025-05-19T07:01:39.983Z",
+  "__v": 0
 }
-'''
+```
 
 ---
 
@@ -218,20 +220,18 @@
 
 - **Response**: 생성된 보상 정보
 
-'''json
+```json
 {
-"rewardId": 23,
-"eventId": 3,
-"type": "ITEM",
-"conditionIds": [
-1
-],
-"name": "솔에르다",
-"quantity": 100,
-"\_id": "682b08840d3006f6815ad79c",
-"\_\_v": 0
+  "rewardId": 23,
+  "eventId": 3,
+  "type": "ITEM",
+  "conditionIds": [1],
+  "name": "솔에르다",
+  "quantity": 100,
+  "_id": "682b08840d3006f6815ad79c",
+  "__v": 0
 }
-'''
+```
 
 ---
 
@@ -245,20 +245,18 @@
 
 - **Response**: 해당 이벤트의 보상 목록
 
-'''json
+```json
 {
-"\_id": "682ad7681df7c77203b757bb",
-"rewardId": 2,
-"eventId": 3,
-"type": "ITEM",
-"conditionIds": [
-1
-],
-"name": "솔에르다",
-"quantity": 100,
-"\_\_v": 0
+  "_id": "682ad7681df7c77203b757bb",
+  "rewardId": 2,
+  "eventId": 3,
+  "type": "ITEM",
+  "conditionIds": [1],
+  "name": "솔에르다",
+  "quantity": 100,
+  "__v": 0
 }
-'''
+```
 
 ---
 
@@ -274,12 +272,12 @@
 
 - **Response**:
 
-'''json
+```json
 {
-"requestStatus": "SUCCESS",
-"reason": "조건 미충족시 메시지"
+  "requestStatus": "SUCCESS",
+  "reason": "조건 미충족시 메시지"
 }
-'''
+```
 
 ---
 
@@ -289,20 +287,20 @@
 - **권한**: USER, ADMIN
 - **Response**: 본인 요청 이력 목록
 
-'''json
+```json
 [
-{
-"_id": "682ad7701df7c77203b757c3",
-"userEmail": "admin",
-"rewardId": 2,
-"eventId": 3,
-"requestStatus": "SUCCESS",
-"reason": "",
-"requestedAt": "2025-05-19T07:02:33.648Z",
-"__v": 0
-}
+  {
+    "_id": "682ad7701df7c77203b757c3",
+    "userEmail": "admin",
+    "rewardId": 2,
+    "eventId": 3,
+    "requestStatus": "SUCCESS",
+    "reason": "",
+    "requestedAt": "2025-05-19T07:02:33.648Z",
+    "__v": 0
+  }
 ]
-'''
+```
 
 ---
 
@@ -322,24 +320,24 @@
 
 - **Response**: 필터링된 요청 이력 목록
 
-'''json
+```json
 {
-"total": 1,
-"page": 1,
-"limit": 20,
-"data": [
-{
-"_id": "682ad7701df7c77203b757c3",
-"userEmail": "admin",
-"rewardId": 2,
-"eventId": 3,
-"requestStatus": "SUCCESS",
-"reason": "",
-"requestedAt": "2025-05-19T07:02:33.648Z",
-"__v": 0
+  "total": 1,
+  "page": 1,
+  "limit": 20,
+  "data": [
+    {
+      "_id": "682ad7701df7c77203b757c3",
+      "userEmail": "admin",
+      "rewardId": 2,
+      "eventId": 3,
+      "requestStatus": "SUCCESS",
+      "reason": "",
+      "requestedAt": "2025-05-19T07:02:33.648Z",
+      "__v": 0
+    }
+  ]
 }
-]
-}
-'''
+```
 
 ---
